@@ -3,12 +3,138 @@
   <head>
     <meta charset="UTF-8" />
     <!-- PON UN FAVICON!!! -->
-    <link rel="icon" type="image/svg+xml" href="" />
+    <link rel="icon" type="image/svg+xml" href />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:ital,wght@0,300;1,300&display=swap"
+      rel="stylesheet">
     <!-- CAMBIA EL TITLE!!! -->
     <title>Vite Template</title>
   </head>
   <body>
+
+    <header class="header">
+      <div class="header__bar">
+        <img src="./assets/images/logo.svg" alt="LOGO" class="header__logo">
+        <img id="hamburger-icon" src="./assets/images/icon-hamburger.svg"
+          alt="MENU"
+          class="header__menuicon">
+      </div>
+      <div id="header__spot" class="header__spot">
+        <p class="text-spot">Immersive experiences that deliver</p>
+      </div>
+
+      <nav>
+        <ul class="menu">
+          <li class="menu__item">
+            <a href class="menu__link">ABOUT</a>
+          </li>
+          <li class="menu__item">
+            <a href class="menu__link">CAREERS</a>
+          </li>
+          <li class="menu__item">
+            <a href class="menu__link">EVENTS</a>
+          </li>
+          <li class="menu__item">
+            <a href class="menu__link">PRODUCTS</a>
+          </li>
+          <li class="menu__item">
+            <a href class="menu__link">SUPPORT</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="main">
+      <div class="vrbox">
+        <img src="./assets/images/mobile/image-interactive.jpg" alt
+          class="vrbox__img">
+        <div class="vrbox__textbox">
+          <h2 class="text-h2">The leader in interactive VR</h2>
+          <p class="text-p">Founded in 2011, Loopstudios has been producing
+            world-class virtual
+            reality projects for some of the best companies around the globe.
+            Our
+            award-winning creations have transformed businesses through digital
+            experiences that bind to their brand.</p>
+        </div>
+      </div>
+
+      <div>
+        <h2 class="text-h2">OUR CREATIONS</h2>
+        <div class="creation">
+          <img class="creation__img"
+            src="./assets/images/mobile/image-deep-earth.jpg" alt>
+          <h3 class="text-h3 creation__name">DEEP EARTH</h3>
+        </div>
+
+        <div class="creation">
+          <img class="creation__img"
+            src="./assets/images/mobile/image-night-arcade.jpg" alt>
+          <h3 class="text-h3 creation__name">NIGHT ARCADE</h3>
+        </div>
+
+        <div class="creation">
+          <img src="./assets/images/mobile/image-soccer-team.jpg" alt>
+          <h3 class="text-h3 creation__name">SOCCER TEAM VR</h3>
+        </div>
+
+        <div class="creation">
+          <img src="./assets/images/mobile/image-grid.jpg" alt>
+          <h3 class="text-h3 text-h3--small creation__name">THE GRID</h3>
+        </div>
+
+        <div class="creation">
+          <img src="./assets/images/mobile/image-from-above.jpg" alt>
+          <h3 class="text-h3 creation__name">FROM UP ABOVE VR</h3>
+        </div>
+
+        <div class="creation">
+          <img src="./assets/images/mobile/image-curiosity.jpg" alt>
+          <h3 class="text-h3 creation__name">POCKET BOREALIS</h3>
+        </div>
+
+        <div class="creation">
+          <img src="./assets/images/mobile/image-curiosity.jpg" alt>
+          <h3 class="text-h3 creation__name">THE CURIOSITY</h3>
+        </div>
+
+        <div class="creation">
+          <img src="./assets/images/mobile/image-fisheye.jpg" alt>
+          <h3 class="text-h3 creation__name">MAKE IT FISHEYE</h3>
+        </div>
+
+        <div class="button__box">
+          <button class="button">SEE ALL</button>
+        </div>
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <img src="./assets/images/logo.svg" alt="LOGO" class="footer__logo">
+
+      <a href class="footer__link">About</a>
+      <a href class="footer__link">Careers</a>
+      <a href class="footer__link">Events</a>
+      <a href class="footer__link">Products</a>
+      <a href class="footer__link footer__link--lastcld">Support</a>
+
+      <div class="social">
+        <img class="social__img" src="./assets/images/icon-facebook.svg" alt>
+        <img class="social__img" src="./assets/images/icon-twitter.svg" alt>
+        <img class="social__img" src="./assets/images/icon-pinterest.svg" alt>
+        <img class="social__img" src="./assets/images/icon-instagram.svg" alt>
+      </div>
+
+      <span class="footer__copyright">© 2021 Loopstudios. All rights
+        reserved.</span>
+
+    </footer>
     <script type="module" src="./js/index.js"></script>
   </body>
 </html>

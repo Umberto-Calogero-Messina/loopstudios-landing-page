@@ -1,1 +1,43 @@
+.text {
+  &-spot {
+    font-family: 'Josefin Sans', serif;
+    font-size: 40px;
+    line-height: 38px;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: #fff;
+    padding: 24px;
+    margin: 0;
+  }
 
+  &-h2 {
+    font-family: 'Josefin Sans', serif;
+    font-size: 32px;
+    line-height: 32px;
+    font-weight: 300;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  &-p {
+    font-family: 'Alata', serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 25px;
+    opacity: 50%;
+  }
+
+  &-h3 {
+    font-family: 'Josefin Sans', serif;
+    font-size: 24px;
+    line-height: 24px;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: white;
+    max-width: 9ch;
+
+    &--small {
+      max-width: 6ch;
+    }
+  }
+}

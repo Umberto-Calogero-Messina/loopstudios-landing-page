@@ -1,0 +1,36 @@
+.footer {
+  background-color: black;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 56px 52px;
+
+  &__logo {
+    width: 144px;
+    margin-bottom: 32px;
+  }
+
+  &__link {
+    color: white;
+    padding-block: 10px;
+  }
+
+  &__copyright {
+    font-family: 'Alata', serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 25px;
+    color: #ffffff;
+    opacity: 50%;
+  }
+}
+
+.social {
+  display: flex;
+  margin-bottom: 16px;
+
+  &__img {
+    padding: 48px 8px 0;
+  }
+}
