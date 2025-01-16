@@ -25,7 +25,7 @@
   &__logo {
     width: 144px;
     position: relative;
-    z-index: 10;
+    z-index: 1;
     @include responsive(desktop) {
       width: 192px;
     }
@@ -34,7 +34,7 @@
   &__menuicon {
     width: 24px;
     position: relative;
-    z-index: 10;
+    z-index: 1;
   }
 
   &__spot {
@@ -73,6 +73,7 @@
   translate: 100% 0;
   transition: translate 0.3s;
   @include responsive(desktop) {
+    translate: 0;
     height: 32px;
     display: flex;
     flex-direction: row;
