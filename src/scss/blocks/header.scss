@@ -1,3 +1,5 @@
+@use '../mixins/responsive.scss' as *;
+
 .header {
   background-image: url(./assets/images/mobile/image-hero.jpg);
   background-repeat: no-repeat;
@@ -6,17 +8,27 @@
   height: 650px;
   margin-bottom: 96px;
 
+  @include responsive(desktop) {
+    background-image: url(./assets/images/desktop/image-hero.jpg);
+  }
+
   &__bar {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 44px 24px;
+    @include responsive(desktop) {
+      padding: 64px 0 0 165px;
+    }
   }
 
   &__logo {
     width: 144px;
     position: relative;
     z-index: 10;
+    @include responsive(desktop) {
+      width: 192px;
+    }
   }
 
   &__menuicon {
@@ -30,11 +42,27 @@
     height: 196px;
     margin: 163px auto;
     border: 2px solid white;
+    @include responsive(desktop) {
+      width: 650px;
+      height: 278px;
+      margin: 130px 165px;
+    }
+  }
+
+  &__hamburger {
+    width: 20px;
+    z-index: 1;
+    cursor: pointer;
+    @include responsive(desktop) {
+      display: none;
+    }
   }
 }
 
 .menu {
-  display: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   position: absolute;
   top: 0;
   width: 100%;
@@ -42,9 +70,27 @@
   background-color: black;
   color: white;
   padding-top: 223px;
+  translate: 100% 0;
+  transition: translate 0.3s;
+  @include responsive(desktop) {
+    height: 32px;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    background-color: transparent;
+    color: white;
+    padding: 64px 165px;
+  }
+
+  &--active {
+    translate: 0 0;
+  }
 
   &__item {
     padding: 24px;
+    @include responsive(desktop) {
+      padding-top: 0;
+    }
   }
 
   &__link {
@@ -52,5 +98,8 @@
     font-size: 24px;
     line-height: 25px;
     font-weight: 300;
+    @include responsive(desktop) {
+      font-size: 15px;
+    }
   }
 }

@@ -20,7 +20,8 @@
     <header class="header">
       <div class="header__bar">
         <img src="./assets/images/logo.svg" alt="LOGO" class="header__logo">
-        <img id="hamburger-icon" src="./assets/images/icon-hamburger.svg"
+        <img class="header__hamburger" id="hamburger-icon"
+          src="./assets/images/icon-hamburger.svg"
           alt="MENU"
           class="header__menuicon">
       </div>
@@ -29,7 +30,7 @@
       </div>
 
       <nav>
-        <ul class="menu">
+        <ul id="menu" class="menu">
           <li class="menu__item">
             <a href class="menu__link">ABOUT</a>
           </li>
@@ -51,8 +52,13 @@
 
     <main class="main">
       <div class="vrbox">
-        <img src="./assets/images/mobile/image-interactive.jpg" alt
-          class="vrbox__img">
+        <picture>
+          <source
+            srcset="./assets/images/mobile/image-interactive.jpg"
+            media="(max-width: 1440px)" />
+          <img class="vrbox__img"
+            src="./assets/images/desktop/image-interactive.jpg" alt />
+        </picture>
         <div class="vrbox__textbox">
           <h2 class="text-h2">The leader in interactive VR</h2>
           <p class="text-p">Founded in 2011, Loopstudios has been producing
@@ -64,48 +70,105 @@
         </div>
       </div>
 
-      <div>
+      <div class="creation__box">
         <h2 class="text-h2">OUR CREATIONS</h2>
-        <div class="creation">
-          <img class="creation__img"
-            src="./assets/images/mobile/image-deep-earth.jpg" alt>
-          <h3 class="text-h3 creation__name">DEEP EARTH</h3>
-        </div>
 
-        <div class="creation">
-          <img class="creation__img"
-            src="./assets/images/mobile/image-night-arcade.jpg" alt>
-          <h3 class="text-h3 creation__name">NIGHT ARCADE</h3>
-        </div>
+        <div class="creation__grid">
+          <div class="creation">
+            <picture>
+              <source
+                srcset="/assets/images/mobile/image-deep-earth.jpg"
+                media="(max-width: 1440px)" />
+              <img class="creation__img"
+                src="/assets/images/desktop/image-deep-earth.jpg" alt />
+            </picture>
+            <h3 class="text-h3 creation__name">DEEP EARTH</h3>
+          </div>
 
-        <div class="creation">
-          <img src="./assets/images/mobile/image-soccer-team.jpg" alt>
-          <h3 class="text-h3 creation__name">SOCCER TEAM VR</h3>
-        </div>
+          <div class="creation">
 
-        <div class="creation">
-          <img src="./assets/images/mobile/image-grid.jpg" alt>
-          <h3 class="text-h3 text-h3--small creation__name">THE GRID</h3>
-        </div>
+            <picture>
+              <source
+                srcset="./assets/images/mobile/image-night-arcade.jpg"
+                media="(max-width: 1440px)" />
+              <img class="creation__img"
+                src="./assets/images/desktop/image-night-arcade.jpg" alt />
+            </picture>
+            <h3 class="text-h3 creation__name">NIGHT ARCADE</h3>
+          </div>
 
-        <div class="creation">
-          <img src="./assets/images/mobile/image-from-above.jpg" alt>
-          <h3 class="text-h3 creation__name">FROM UP ABOVE VR</h3>
-        </div>
+          <div class="creation">
+            <picture>
+              <source
+                srcset="./assets/images/mobile/image-soccer-team.jpg"
+                media="(max-width: 1440px)" />
+              <img class="creation__img"
+                src="./assets/images/desktop/image-soccer-team.jpg" alt />
+            </picture>
 
-        <div class="creation">
-          <img src="./assets/images/mobile/image-curiosity.jpg" alt>
-          <h3 class="text-h3 creation__name">POCKET BOREALIS</h3>
-        </div>
+            <h3 class="text-h3 creation__name">SOCCER TEAM VR</h3>
+          </div>
 
-        <div class="creation">
-          <img src="./assets/images/mobile/image-curiosity.jpg" alt>
-          <h3 class="text-h3 creation__name">THE CURIOSITY</h3>
-        </div>
+          <div class="creation">
+            <picture>
+              <source
+                srcset="./assets/images/mobile/image-grid.jpg"
+                media="(max-width: 1440px)" />
+              <img class="creation__img"
+                src="./assets/images/desktop/image-grid.jpg" alt />
+            </picture>
 
-        <div class="creation">
-          <img src="./assets/images/mobile/image-fisheye.jpg" alt>
-          <h3 class="text-h3 creation__name">MAKE IT FISHEYE</h3>
+            <h3 class="text-h3 text-h3--small creation__name">THE GRID</h3>
+          </div>
+
+          <div class="creation">
+            <picture>
+              <source
+                srcset="./assets/images/mobile/image-from-above.jpg"
+                media="(max-width: 1440px)" />
+              <img class="creation__img"
+                src="./assets/images/desktop/image-from-above.jpg" alt />
+            </picture>
+
+            <h3 class="text-h3 creation__name">FROM UP ABOVE VR</h3>
+          </div>
+
+          <div class="creation">
+            <picture>
+              <source
+                srcset="./assets/images/mobile/image-pocket-borealis.jpg"
+                media="(max-width: 1440px)" />
+              <img class="creation__img"
+                src="./assets/images/desktop/image-pocket-borealis.jpg" alt />
+            </picture>
+
+            <h3 class="text-h3 creation__name">POCKET BOREALIS</h3>
+          </div>
+
+          <div class="creation">
+            <picture>
+              <source
+                srcset="./assets/images/mobile/image-curiosity.jpg"
+                media="(max-width: 1440px)" />
+              <img class="creation__img"
+                src="./assets/images/desktop/image-curiosity.jpg" alt />
+            </picture>
+
+            <h3 class="text-h3 creation__name">THE CURIOSITY</h3>
+          </div>
+
+          <div class="creation">
+            <picture>
+              <source
+                srcset="./assets/images/mobile/image-fisheye.jpg"
+                media="(max-width: 1440px)" />
+              <img class="creation__img"
+                src="./assets/images/desktop/image-fisheye.jpg" alt />
+            </picture>
+
+            <h3 class="text-h3 creation__name">MAKE IT FISHEYE</h3>
+          </div>
+
         </div>
 
         <div class="button__box">
@@ -116,23 +179,30 @@
     </main>
 
     <footer class="footer">
-      <img src="./assets/images/logo.svg" alt="LOGO" class="footer__logo">
+      <div class="footer__box footer__box--logo">
+        <img src="./assets/images/logo.svg" alt="LOGO" class="footer__logo">
 
-      <a href class="footer__link">About</a>
-      <a href class="footer__link">Careers</a>
-      <a href class="footer__link">Events</a>
-      <a href class="footer__link">Products</a>
-      <a href class="footer__link footer__link--lastcld">Support</a>
+        <div class="footer__nav">
+          <a href class="footer__link">About</a>
+          <a href class="footer__link">Careers</a>
+          <a href class="footer__link">Events</a>
+          <a href class="footer__link">Products</a>
+          <a href class="footer__link footer__link--lastcld">Support</a>
+        </div>
 
-      <div class="social">
-        <img class="social__img" src="./assets/images/icon-facebook.svg" alt>
-        <img class="social__img" src="./assets/images/icon-twitter.svg" alt>
-        <img class="social__img" src="./assets/images/icon-pinterest.svg" alt>
-        <img class="social__img" src="./assets/images/icon-instagram.svg" alt>
       </div>
 
-      <span class="footer__copyright">© 2021 Loopstudios. All rights
-        reserved.</span>
+      <div class="footer__box footer__box--social">
+        <div class="social">
+          <img class="social__img" src="./assets/images/icon-facebook.svg" alt>
+          <img class="social__img" src="./assets/images/icon-twitter.svg" alt>
+          <img class="social__img" src="./assets/images/icon-pinterest.svg" alt>
+          <img class="social__img" src="./assets/images/icon-instagram.svg" alt>
+        </div>
+
+        <span class="footer__copyright">© 2021 Loopstudios. All rights
+          reserved.</span>
+      </div>
 
     </footer>
     <script type="module" src="./js/index.js"></script>

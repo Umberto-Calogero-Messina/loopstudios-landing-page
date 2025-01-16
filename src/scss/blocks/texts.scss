@@ -1,3 +1,5 @@
+@use '../mixins/responsive.scss' as *;
+
 .text {
   &-spot {
     font-family: 'Josefin Sans', serif;
@@ -8,6 +10,12 @@
     color: #fff;
     padding: 24px;
     margin: 0;
+
+    @include responsive(desktop) {
+      font-size: 72px;
+      line-height: 70px;
+      padding: 40px;
+    }
   }
 
   &-h2 {
@@ -17,6 +25,10 @@
     font-weight: 300;
     text-transform: uppercase;
     text-align: center;
+    margin-top: 0;
+    @include responsive(desktop) {
+      text-align: left;
+    }
   }
 
   &-p {
@@ -25,6 +37,7 @@
     font-size: 15px;
     line-height: 25px;
     opacity: 50%;
+    margin-bottom: 0;
   }
 
   &-h3 {

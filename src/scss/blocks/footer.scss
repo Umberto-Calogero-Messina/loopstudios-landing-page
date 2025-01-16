@@ -1,19 +1,62 @@
+@use '../mixins/responsive.scss' as *;
+@use '../mixins/hover.scss' as *;
+
 .footer {
   background-color: black;
   text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   padding: 56px 52px;
+  @include responsive(desktop) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 44px 165px;
+  }
+  &__box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &--logo {
+      @include responsive(desktop) {
+        align-items: start;
+      }
+    }
+    &--social {
+      @include responsive(desktop) {
+        align-items: end;
+      }
+    }
+  }
+
+  &__nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include responsive(desktop) {
+      flex-direction: row;
+    }
+  }
 
   &__logo {
     width: 144px;
     margin-bottom: 32px;
+    @include responsive(desktop) {
+      margin-inline: 32px;
+    }
   }
 
   &__link {
     color: white;
     padding-block: 10px;
+    font-family: 'Alata', serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 25px;
+    @include responsive(desktop) {
+      padding-inline: 32px;
+    }
+    @include hover {
+      border-bottom: 2px solid white;
+    }
   }
 
   &__copyright {
@@ -30,7 +73,19 @@
   display: flex;
   margin-bottom: 16px;
 
+  @include responsive(desktop) {
+    padding-inline: 0;
+  }
+
   &__img {
-    padding: 48px 8px 0;
+    padding: 48px 8px 10px;
+
+    @include responsive(desktop) {
+      padding: 0 16px;
+    }
+
+    @include hover {
+      border-bottom: 2px solid white;
+    }
   }
 }

@@ -1,11 +1,12 @@
-// El styles lo importamos aquí, ya se carga después al compilar todo
 import '../scss/styles.scss';
+const hamburgerButton = document.getElementById('hamburger-icon');
+const menuElement = document.getElementById('menu');
 
-const hambuergerButton = document.getElementById('hamburger-icon');
-const spotElement = document.getElementById('header__spot');
+const toggleMenu = () => {
+  menuElement.classList.toggle('menu--active');
 
-const ShowMenu = (e) => {
-  console.log(e);
+  const isMenuActive = menuElement.classList.contains('menu--active');
+  hamburgerButton.src = isMenuActive ? './assets/images/icon-close.svg' : './assets/images/icon-hamburger.svg';
 };
 
-hambuergerButton.addEventListener('click', ShowMenu);
+hamburgerButton.addEventListener('click', toggleMenu);

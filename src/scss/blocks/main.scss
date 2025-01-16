@@ -1,13 +1,36 @@
+@use '../mixins/responsive.scss' as *;
+@use '../mixins/hover.scss' as *;
+
 .main {
+  max-width: 1440px;
   width: 375px;
   margin-inline: auto;
   padding-inline: 24px;
+  @include responsive(desktop) {
+    width: 100%;
+    padding-inline: 164px;
+  }
 }
 
 .vrbox {
   margin-bottom: 96px;
+  position: relative;
+
+  &__img {
+    @include responsive(desktop) {
+      width: 731px;
+    }
+  }
   &__textbox {
     padding: 24px;
+    @include responsive(desktop) {
+      position: absolute;
+      background-color: #fff;
+      padding: 96px 0 0 96px;
+      width: 445px;
+      bottom: 0px;
+      left: 550px;
+    }
   }
 }
 
@@ -15,10 +38,36 @@
   position: relative;
   margin-bottom: 24px;
   background-image: linear-gradient(to right, rgb(0 0 0 / 0.6), transparent);
+  @include responsive(desktop) {
+    margin: 15px;
+  }
+
+  @include hover {
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.75));
+    & .creation__name {
+      color: black;
+    }
+  }
+
+  &__box {
+    @include responsive(desktop) {
+      position: relative;
+    }
+  }
+
+  &__grid {
+    @include responsive(desktop) {
+      display: grid;
+      grid-template-columns: repeat(4, 256px);
+    }
+  }
   &__name {
     position: absolute;
     bottom: 0;
     left: 20px;
+    @include responsive(desktop) {
+      left: 40px;
+    }
   }
 
   &__img {
@@ -36,9 +85,18 @@
   font-size: 14px;
   line-height: 14px;
   letter-spacing: 5px;
+  @include hover {
+    background-color: black;
+    color: white;
+  }
 
   &__box {
     text-align: center;
     margin-bottom: 96px;
+    @include responsive(desktop) {
+      position: absolute;
+      top: -5px;
+      right: 0;
+    }
   }
 }
